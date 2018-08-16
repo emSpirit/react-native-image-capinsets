@@ -1,3 +1,7 @@
+## a little modify
+1. Installation npm install https://github.com/emSpirit/react-native-image-capinsets.git
+2. use react-native: 0.56.0
+
 # react-native-image-capinsets
 adds support for a similar functionality as `<Image capInsets={...} />` to android.
 behind the scenes it will generate a `NinePatchDrawable` and set as background for the android `ImageView`
