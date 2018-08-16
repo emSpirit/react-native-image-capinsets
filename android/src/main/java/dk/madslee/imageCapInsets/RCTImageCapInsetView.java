@@ -41,11 +41,16 @@ public class RCTImageCapInsetView extends ImageView {
         RCTImageLoaderTask task = new RCTImageLoaderTask(mUri, getContext(), new RCTImageLoaderListener() {
             @Override
             public void onImageLoaded(Bitmap bitmap) {
-                int ratio = Math.round(bitmap.getDensity() / 160);
-                int top = mCapInsets.top * ratio;
-                int right = bitmap.getWidth() - (mCapInsets.right * ratio);
-                int bottom = bitmap.getHeight() - (mCapInsets.bottom * ratio);
-                int left = mCapInsets.left * ratio;
+                // int ratio = Math.round(bitmap.getDensity() / 160);
+                // int top = mCapInsets.top * ratio;
+                // int right = bitmap.getWidth() - (mCapInsets.right * ratio);
+                // int bottom = bitmap.getHeight() - (mCapInsets.bottom * ratio);
+                // int left = mCapInsets.left * ratio;
+                // Log.d("RCTImageLoader"," ratio:" + ratio);
+                int top = mCapInsets.top;
+                int right = bitmap.getWidth() - mCapInsets.right;
+                int bottom = bitmap.getHeight() - mCapInsets.bottom;
+                int left = mCapInsets.left;
 
                 NinePatchDrawable ninePatchDrawable = NinePatchBitmapFactory.createNinePathWithCapInsets(getResources(), bitmap, top, left, bottom, right, null);
                 setBackground(ninePatchDrawable);
