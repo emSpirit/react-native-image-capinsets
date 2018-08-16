@@ -1,5 +1,7 @@
 ## a little modify
-1. Installation npm install https://github.com/emSpirit/react-native-image-capinsets.git
+1. Installation 
+* npm install https://github.com/emSpirit/react-native-image-capinsets.git
+* `react-native link react-native-image-capinsets`
 2. use react-native: 0.56.0
 
 # react-native-image-capinsets
